@@ -1,21 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import HomeScreen from "./src/screens/HomeScreen";
+import DateViewerScreen from "./src/screens/DateViewerScreen";
+import DateReporterScreen from "./src/screens/DateReporterScreen";
+import LoginScreen from "./src/screens/LoginScreen";
+import ProfileOptionsScreen from "./src/screens/ProfileOptionsScreen";
+import ResourcesScreen from "./src/screens/ResourcesScreen";
+import SignUpScreen from "./src/screens/SignUpScreen";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const navigator = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Report: DateReporterScreen,
+    Viewer: DateViewerScreen,
+    Login: LoginScreen,
+    Profile: ProfileOptionsScreen,
+    Resources: ResourcesScreen,
+    SignUp: SignUpScreen
   },
-});
+  {
+    initialRouteName: "Home",
+    defaultNavigationOptions: {
+      title: "App"
+    }
+  }
+);
+
+export default createAppContainer(navigator);
