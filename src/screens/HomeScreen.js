@@ -1,25 +1,49 @@
 import React from "react";
 import {View, Button, Text, StyleSheet, TouchableOpacity} from "react-native";
+import { color } from "react-native-reanimated";
 
 const HomeScreen = function({navigation}) {
 
   return <View>
-    <Text style={styles.text}>Sudbury Bad Date Reporter</Text>
-    <TouchableOpacity onPress={function(){navigation.navigate('Report')}}>
-      <Text>Report a "Bad Date"</Text>
-    </TouchableOpacity>
+    <View style={styles.header}>
+    </View>
+    <View style={styles.buttonContainer}>
+      <TouchableOpacity style={styles.button} 
+      onPress={function(){navigation.navigate('Report')}}>
+        <Text>Report</Text>
+      </TouchableOpacity>
 
-    <TouchableOpacity onPress={function(){navigation.navigate('Viewer')}}>
-      <Text>View "Bad Date" Reports</Text>
-    </TouchableOpacity>
-    
+      <TouchableOpacity style={styles.button} 
+      onPress={function(){navigation.navigate('Viewer')}}>
+        <Text>View</Text>
+      </TouchableOpacity>
+    </View>
   </View>
 
 };
 
 const styles = StyleSheet.create({
-  text: {
-    fontSize: 20
+  header: {
+    width: 500,
+    height: 125,
+    backgroundColor:'maroon'
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+
+  },
+  button: {
+    bottom: 16,
+    paddingVertical: 8,
+    borderWidth: 4,
+    borderColor: "#20232a",
+    borderRadius: 6,
+    backgroundColor: "#61dafb",
+    color: "#20232a",
+    textAlign: "center",
+    fontSize: 30,
+    fontWeight: "bold"
   }
 });
 
