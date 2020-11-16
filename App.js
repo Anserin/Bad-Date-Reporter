@@ -8,6 +8,11 @@ import LoginScreen from "./src/screens/LoginScreen";
 import ProfileOptionsScreen from "./src/screens/ProfileOptionsScreen";
 import ResourcesScreen from "./src/screens/ResourcesScreen";
 import SignUpScreen from "./src/screens/SignUpScreen";
+import ReportLocationScreen from "./src/screens/ReportScreens/ReportLocationScreen";
+import ReportTypeScreen from "./src/screens/ReportScreens/ReportTypeScreen";
+import ReportOffenderScreen from "./src/screens/ReportScreens/ReportOffenderScreen";
+import ReportOtherScreen from "./src/screens/ReportScreens/ReportOtherScreen";
+import ReportTimeScreen from "./src/screens/ReportScreens/ReportTimeScreen";
 
 const navigator = createStackNavigator(
   {
@@ -17,7 +22,12 @@ const navigator = createStackNavigator(
     Login: LoginScreen,
     Profile: ProfileOptionsScreen,
     Resources: ResourcesScreen,
-    SignUp: SignUpScreen
+    SignUp: SignUpScreen,
+    Location: ReportLocationScreen,
+    Type: ReportTypeScreen,
+    Offender: ReportOffenderScreen,
+    Other: ReportOtherScreen,
+    Time: ReportTimeScreen
   },
   {
     initialRouteName: "Home",
