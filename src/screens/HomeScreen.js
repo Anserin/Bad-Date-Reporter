@@ -3,7 +3,8 @@ import {View, Button, Text, StyleSheet, TouchableOpacity} from "react-native";
 import { color } from "react-native-reanimated";
 
 const HomeScreen = function({navigation}) {
-  return <View>
+  return (
+  <View>
     <View style={styles.header}>
     </View>
     <View style={styles.buttonContainer}>
@@ -18,6 +19,7 @@ const HomeScreen = function({navigation}) {
       </TouchableOpacity>
     </View>
   </View>
+  );
 };
 
 const styles = StyleSheet.create({

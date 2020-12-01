@@ -6,7 +6,8 @@ const DateReporterScreen = function ({ navigation }) {
   const [myself_selected, setMyself] = useState(false);
   const [other_selected, setOther] = useState(false);
 
-  return <View>
+  return (
+  <View>
     <View style={styles.information_container}>
       <Text style={styles.text_info}>
         Please fill in the information as best as you can.
@@ -43,6 +44,7 @@ const DateReporterScreen = function ({ navigation }) {
     />
     </View>
   </View>
+  );
 };
 
 const styles = StyleSheet.create({
