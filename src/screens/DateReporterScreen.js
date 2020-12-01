@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Button, Text, StyleSheet, Alert } from "react-native";
 import CheckBox from '@react-native-community/checkbox'
 
 const DateReporterScreen = function ({ navigation }) {
@@ -17,7 +17,7 @@ const DateReporterScreen = function ({ navigation }) {
     </View>
 
     <View style={styles.form}>
-      <Text style={styles.question_label}>Who did this bad date/aggressor incident happen to?</Text>
+      <Text style={styles.question_label}>Who did this bad date/aggressor incident happen to?<Text style={{color: "red"}}>*</Text></Text>
       <View style={styles.checkbox_container}>
         <CheckBox
           value={myself_selected}
@@ -39,7 +39,23 @@ const DateReporterScreen = function ({ navigation }) {
     <View style={styles.next_page_button}>
     <Button 
       title="Start" 
-      onPress={function(){navigation.navigate('Time')}} 
+      onPress={function(){
+        if (myself_selected || other_selected) {
+          navigation.navigate("Time")
+        }
+        else {
+          Alert.alert(
+            "Can't Continue",
+            "Please fill out the required field",
+            [
+              { 
+                text: "OK",
+              }
+            ],
+            { cancelable: false }
+          );
+        }
+      }} 
       style={styles.next_page_button}
     />
     </View>
