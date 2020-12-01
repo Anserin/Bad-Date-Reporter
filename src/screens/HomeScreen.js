@@ -18,6 +18,14 @@ const HomeScreen = function({navigation}) {
         <Text>View</Text>
       </TouchableOpacity>
     </View>
+
+    <View>
+      <Button 
+        title="TEST" 
+        onPress={function(){navigation.navigate('Login')}}
+      />
+    </View>
+    
   </View>
   );
 };
