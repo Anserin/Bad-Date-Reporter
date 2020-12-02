@@ -13,19 +13,20 @@ const LoginScreen = function({navigation}) {
 
       <View style={styles.form}>
         <View style={styles.input_view}>
-          <Text style={styles.input_label}>Username:</Text>
           <TextInput 
             style={styles.input}
             onChangeText={text => on_change_username(text)}
             value={username}
+            placeholder={"Username"}
           />
         </View>
         <View style={styles.input_view}>
-          <Text style={styles.input_label}>Password:</Text>
           <TextInput 
             style={styles.input}
             onChangeText={text => on_change_password(text)}
             value={password}
+            placeholder={"Password"}
+            secureTextEntry={true}
           />
         </View>
         <View style={styles.signin_view}>
@@ -61,6 +62,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     justifyContent: "center",
     flexDirection: "row",
+    marginBottom: 5,
   },
   input: {
     height: 30,
@@ -68,10 +70,6 @@ const styles = StyleSheet.create({
     borderColor: "gray",
     borderWidth: 1,
     alignSelf: "flex-end",
-  },
-  input_label: {
-    fontSize: 20,
-    alignSelf: "flex-start"
   },
   signin_view: {
     width: 100,
