@@ -1,6 +1,5 @@
 import React from "react";
 import {View, Button, Text, StyleSheet, TouchableOpacity} from "react-native";
-import { color } from "react-native-reanimated";
 
 const HomeScreen = function({navigation}) {
   return (
@@ -22,7 +21,7 @@ const HomeScreen = function({navigation}) {
     <View>
       <Button 
         title="TEST" 
-        onPress={function(){navigation.navigate('Login')}}
+        onPress={function(){navigation.navigate('SignUp')}}
       />
     </View>
     
