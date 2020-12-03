@@ -26,7 +26,7 @@ const ReportTypeScreen = function ({ navigation }) {
 
       <View style={styles.form}>
         <View style={styles.question}>
-          <Text style={styles.question_label}>Incident Type<Text style={{ color: "red" }}>*</Text></Text>
+          <Text style={styles.question_label}>Incident Type<Text style={{ color: "red" }}>(*Required*)</Text></Text>
           <View style={styles.checkboxes}>
             <View style={styles.subcheckboxes}>
               <View style={styles.checkbox_container}>
@@ -153,6 +153,9 @@ const ReportTypeScreen = function ({ navigation }) {
             onPress={() => { navigation.navigate('Location') }}
           />
         </View>
+
+        <Text>Page 3/5</Text>
+
         <View style={styles.next_button}>
           <Button
             title="Next"

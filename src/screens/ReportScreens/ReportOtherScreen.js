@@ -28,6 +28,9 @@ const ReportOtherScreen = function ({ navigation }) {
             onPress={() => { navigation.navigate('Offender') }}
           />
         </View>
+
+        <Text>Page 5/5</Text>
+
         <View style={styles.next_button}>
           <Button
             title="Submit!"
