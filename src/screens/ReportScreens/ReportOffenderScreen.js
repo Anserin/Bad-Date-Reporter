@@ -210,6 +210,9 @@ const ReportOffenderScreen = function ({ navigation }) {
             onPress={() => { navigation.navigate('Type') }}
           />
         </View>
+
+        <Text>Page 4/5</Text>
+
         <View style={styles.next_button}>
           <Button
             title="Next"

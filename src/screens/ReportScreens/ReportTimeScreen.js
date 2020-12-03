@@ -94,6 +94,9 @@ const ReportTimeScreen = function ({ navigation }) {
           onPress={() => {navigation.navigate('Report')}}
         />
       </View>
+
+      <Text>Page 1/5</Text>
+
       <View style={styles.next_button}>
         <Button 
           title="Next" 

@@ -11,13 +11,13 @@ const DateReporterScreen = function ({ navigation }) {
     <View style={styles.information_container}>
       <Text style={styles.text_info}>
         Please fill in the information as best as you can.
-        Anything with a star is obligated, everything else is optional.{"\n\n"}
+        Anything with "<Text style={{color: "red"}}>(*Required*)</Text>" is obligated, everything else is optional.{"\n\n"}
         To start, check off what applies below and press start to continue.{"\n"}
       </Text>
     </View>
 
     <View style={styles.form}>
-      <Text style={styles.question_label}>Who did this bad date/aggressor incident happen to?<Text style={{color: "red"}}>*</Text></Text>
+      <Text style={styles.question_label}>Who did this bad date/aggressor incident happen to?<Text style={{color: "red"}}>(*Required*)</Text></Text>
       <View style={styles.checkbox_container}>
         <CheckBox
           value={myself_selected}
