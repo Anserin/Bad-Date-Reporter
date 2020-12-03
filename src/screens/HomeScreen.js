@@ -8,12 +8,12 @@ const HomeScreen = function({navigation}) {
     </View>
     <View style={styles.buttonContainer}>
       <TouchableOpacity style={styles.button} 
-      onPress={function(){navigation.navigate('Report')}}>
+      onPress={() => {navigation.navigate('Report')}}>
         <Text>Report</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.button} 
-      onPress={function(){navigation.navigate('Viewer')}}>
+      onPress={() => {navigation.navigate('Viewer')}}>
         <Text>View</Text>
       </TouchableOpacity>
     </View>
@@ -21,7 +21,7 @@ const HomeScreen = function({navigation}) {
     <View>
       <Button 
         title="TEST" 
-        onPress={function(){navigation.navigate('SignUp')}}
+        onPress={() => {navigation.navigate('SignUp')}}
       />
     </View>
     

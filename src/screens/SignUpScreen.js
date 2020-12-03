@@ -41,7 +41,7 @@ const SignUpScreen = function({navigation}) {
         <View style={styles.signin_view}>
           <Button 
             title="Sign Up"
-            onPress={function(){
+            onPress={() => {
               if (username.trim() == '' || password.trim() == '') {
                 Alert.alert(
                   "Can't Continue",

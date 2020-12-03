@@ -39,23 +39,8 @@ const DateReporterScreen = function ({ navigation }) {
     <View style={styles.next_page_button}>
     <Button 
       title="Start" 
-      onPress={function(){
-        if (myself_selected || other_selected) {
-          navigation.navigate("Time")
-        }
-        else {
-          Alert.alert(
-            "Can't Continue",
-            "Please fill out the required field",
-            [
-              { 
-                text: "OK",
-              }
-            ],
-            { cancelable: false }
-          );
-        }
-      }} 
+      onPress={() => navigation.navigate("Time")}
+      disabled={!(myself_selected || other_selected)}
       style={styles.next_page_button}
     />
     </View>
@@ -69,6 +54,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   question_label: {
+    marginLeft: 10,
     fontSize: 16,
   },
   information_container: {

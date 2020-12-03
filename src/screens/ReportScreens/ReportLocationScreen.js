@@ -25,7 +25,7 @@ const ReportLocationScreen = function ({ navigation }) {
 
       <View style={styles.form}>
         <View style={styles.question}>
-          <Text>Where did it happen?<Text style={{ color: "red" }}>*</Text></Text>
+          <Text style={styles.question_label}>Where did it happen?<Text style={{ color: "red" }}>*</Text></Text>
           <View style={styles.checkboxes}>
             <View style={styles.subcheckboxes}>
               <View style={styles.checkbox_container}>
@@ -131,11 +131,12 @@ const ReportLocationScreen = function ({ navigation }) {
         </View>
 
         <View style={styles.question}>
-          <TextInput 
+          <Text style={styles.question_label}>Other Location Information: </Text>
+          <TextInput
             style={styles.location_input}
             onChangeText={text => setLocationInfo(text)}
             value={locationinfo}
-            placeholder={"Other Location Information (address, street, neighborhood, etc.)"}
+            placeholder={"(address, street, neighborhood, etc.)"}
           />
         </View>
       </View>
@@ -150,23 +151,8 @@ const ReportLocationScreen = function ({ navigation }) {
         <View style={styles.next_button}>
           <Button
             title="Next"
-            onPress={function () {
-              if (car || offender || offendhotel || escort || online || street || house || phone || myhotel || park || bar || other) {
-                navigation.navigate('Type')
-              }
-              else {
-                Alert.alert(
-                  "Can't Continue",
-                  "Please choose at least one location",
-                  [
-                    { 
-                      text: "OK",
-                    }
-                  ],
-                  { cancelable: false }
-                );
-              }
-            }}
+            disabled={!(car || offender || offendhotel || escort || online || street || house || phone || myhotel || park || bar || other)}
+            onPress={() => navigation.navigate('Type')}
           />
         </View>
       </View>
@@ -222,6 +208,11 @@ const styles = StyleSheet.create({
     borderColor: "gray",
     borderWidth: 1,
     alignSelf: "flex-start",
+    marginLeft: 10,
+  },
+  question_label: {
+    marginLeft: 10,
+    fontSize: 16,
   },
 });
 

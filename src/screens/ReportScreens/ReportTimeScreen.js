@@ -91,13 +91,13 @@ const ReportTimeScreen = function ({ navigation }) {
       <View style={styles.prev_button}>
         <Button 
           title="Cancel"
-          onPress={function(){navigation.navigate('Report')}}
+          onPress={() => {navigation.navigate('Report')}}
         />
       </View>
       <View style={styles.next_button}>
         <Button 
           title="Next" 
-          onPress={function(){navigation.navigate('Location')}}
+          onPress={() => {navigation.navigate('Location')}}
         />
       </View>
     </View>
@@ -131,7 +131,11 @@ const styles = StyleSheet.create({
   next_button: {
     height: 50,
     width: 100,
-  }
+  },
+  question_label: {
+    marginLeft: 10,
+    fontSize: 16,
+  },
 });
 
 export default ReportTimeScreen;
