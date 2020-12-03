@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
   },
   question_label: {
     marginLeft: 10,
-    fontSize: 16,
+    fontSize: 18,
   },
 });
 
