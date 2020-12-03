@@ -90,7 +90,7 @@ const ReportTimeScreen = function ({ navigation }) {
     <View style={styles.footer_view}>
       <View style={styles.prev_button}>
         <Button 
-          title="Back" 
+          title="Cancel"
           onPress={function(){navigation.navigate('Report')}}
         />
       </View>

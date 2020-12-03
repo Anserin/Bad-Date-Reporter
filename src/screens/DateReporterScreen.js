@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Button, Text, StyleSheet, Alert } from "react-native";
-import CheckBox from '@react-native-community/checkbox'
+import CheckBox from '@react-native-community/checkbox';
 
 const DateReporterScreen = function ({ navigation }) {
   const [myself_selected, setMyself] = useState(false);
