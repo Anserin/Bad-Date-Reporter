@@ -32,7 +32,7 @@ const LoginScreen = function({navigation}) {
         <View style={styles.signin_view}>
           <Button 
             title="Sign in"
-            onPress={function(){navigation.navigate('Home')}}
+            onPress={() => {navigation.navigate('Home')}}
           />
         </View>
       </View>
