@@ -7,12 +7,12 @@ const ReportTimeScreen = function ({ navigation }) {
   const [year, setYear] = useState("2012");
 
   return (
-  <View style={{flex: 1}}>
+  <View style={styles.container}>
     <View style={styles.header_view}>
       <Text style={styles.header_text}> Time of Incident </Text>
     </View>
     <View style={styles.form}>
-      <Text style={{fontSize: 18, marginTop: 12}}>Date: </Text>
+      <Text style={{fontSize: 18, marginTop: 12}}>  Date: </Text>
       <Picker
         selectedValue={day}
         onValueChange={(itemValue, itemIndex) => setDay(itemValue)}
@@ -73,7 +73,7 @@ const ReportTimeScreen = function ({ navigation }) {
       <Picker
         selectedValue={year}
         onValueChange={(itemValue, itemIndex) => setYear(itemValue)}
-        style={{height: 50, width: 100}}
+        style={{height: 50, width: 110}}
         mode={"dropdown"}
       >
         <Picker.Item label="2020" value="2020"/>
@@ -91,6 +91,7 @@ const ReportTimeScreen = function ({ navigation }) {
       <View style={styles.prev_button}>
         <Button 
           title="Cancel"
+          color='maroon'
           onPress={() => {navigation.navigate('Report')}}
         />
       </View>
@@ -99,6 +100,7 @@ const ReportTimeScreen = function ({ navigation }) {
 
       <View style={styles.next_button}>
         <Button 
+          color='maroon'
           title="Next" 
           onPress={() => {navigation.navigate('Location')}}
         />
@@ -109,12 +111,20 @@ const ReportTimeScreen = function ({ navigation }) {
 };
 
 const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: 'lightgrey',
+  },
   header_view: {
     flex: 1,
     alignContent: "center",
+    paddingBottom: 20,
+    backgroundColor: 'maroon',
+    paddingTop: 30,
+    marginBottom: 30,
   },
   header_text: {
-    fontSize: 20,
+    fontSize: 30,
     textAlign: "center",
   },
   form: {

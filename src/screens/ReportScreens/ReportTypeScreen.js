@@ -19,7 +19,7 @@ const ReportTypeScreen = function ({ navigation }) {
 
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <View style={styles.header_view}>
         <Text style={styles.header_text}> Incident Information </Text>
       </View>
@@ -134,10 +134,10 @@ const ReportTypeScreen = function ({ navigation }) {
           </View>
         </View>
 
-        <View style={styles.question}>
+        <View style={styles.question2}>
           <Text style={styles.question_label}>Other Incident Information</Text>
           <TextInput
-            style={styles.incident_input}
+            style={styles.incident_input2}
             onChangeText={text => setIncidentInfo(text)}
             value={incidentinfo}
             placeholder={"(other details about the incident)"}
@@ -150,6 +150,7 @@ const ReportTypeScreen = function ({ navigation }) {
         <View style={styles.prev_button}>
           <Button
             title="Back"
+            color='maroon'
             onPress={() => { navigation.navigate('Location') }}
           />
         </View>
@@ -159,6 +160,7 @@ const ReportTypeScreen = function ({ navigation }) {
         <View style={styles.next_button}>
           <Button
             title="Next"
+            color='maroon'
             onPress={() => navigation.navigate('Offender')}
             disabled={!(s_assault || p_assault || threats || condom || ripoff || consent || theft || kidnap || sti || film || stalk || other)}
           />
@@ -169,12 +171,19 @@ const ReportTypeScreen = function ({ navigation }) {
 };
 
 const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: 'lightgrey',
+  },
   header_view: {
     flex: 1,
     alignContent: "center",
+    paddingBottom: 20,
+    backgroundColor: 'maroon',
+    paddingTop: 30,
   },
   header_text: {
-    fontSize: 20,
+    fontSize: 30,
     textAlign: "center",
   },
   form: {
@@ -196,9 +205,13 @@ const styles = StyleSheet.create({
   },
   checkbox_container: {
     flexDirection: "row",
+    marginLeft: 10,
+    paddingTop: 10,
+    top: 20,
   },
   label: {
-    marginTop: 7,
+    marginTop: 5,
+    fontSize: 15,
   },
   checkboxes: {
     flexDirection: "row",
@@ -207,19 +220,18 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
   question: {
+    paddingTop: 20,
+    paddingBottom: 10,
     flex: 1,
     marginBottom: 20,
+    top: 30,
   },
-  location_input: {
-    height: 40,
-    width: 300,
-    borderColor: "gray",
-    borderWidth: 1,
-    alignSelf: "flex-start",
-  },
-  question_label: {
-    marginLeft: 10,
-    fontSize: 18,
+  question2: {
+    paddingTop: 20,
+    paddingBottom: 10,
+    flex: 1,
+    marginBottom: 20,
+    top: 70,
   },
   incident_input: {
     height: 40,
@@ -227,7 +239,19 @@ const styles = StyleSheet.create({
     borderColor: "gray",
     borderWidth: 1,
     alignSelf: "flex-start",
+  },
+  incident_input2:{
+    height: 40,
+    width: 390,
+    borderColor: "gray",
+    borderWidth: 1,
+    alignSelf: "flex-start",
     marginLeft: 10,
+    top: 10,
+  },
+  question_label: {
+    marginLeft: 10,
+    fontSize: 18,
   },
 });
 

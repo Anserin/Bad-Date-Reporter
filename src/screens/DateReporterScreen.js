@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Button, Text, StyleSheet, Alert } from "react-native";
 import CheckBox from '@react-native-community/checkbox';
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const DateReporterScreen = function ({ navigation }) {
   const [myself_selected, setMyself] = useState(false);
@@ -39,6 +40,7 @@ const DateReporterScreen = function ({ navigation }) {
     <View style={styles.next_page_button}>
     <Button 
       title="Start" 
+      color="maroon"
       onPress={() => navigation.navigate("Time")}
       disabled={!(myself_selected || other_selected)}
       style={styles.next_page_button}
@@ -50,29 +52,35 @@ const DateReporterScreen = function ({ navigation }) {
 
 const styles = StyleSheet.create({
   text_info: {
-    fontSize: 20,
+    fontSize: 25,
+    paddingTop: 20,
     textAlign: "center",
+    borderWidth: 10,
+    backgroundColor: 'lightblue',
   },
   question_label: {
     marginLeft: 10,
-    fontSize: 16,
+    fontSize: 26,
   },
   information_container: {
     alignItems: "center",
   },
   checkbox_container: {
     flexDirection: "row",
+    paddingTop: 30,
+    marginLeft: 120,
   },
   label: {
-    margin: 8,
+    margin: 2,
+    fontSize: 20,
   },
   form: {
     flexDirection: "column"
   },
   next_page_button: {
-    paddingTop: 50,
-    alignSelf: "center",
-    width: 100,
+    color: 'red',
+    marginTop: 20,
+    padding: 20,
   }
 })
 

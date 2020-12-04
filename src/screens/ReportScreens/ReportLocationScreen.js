@@ -18,7 +18,7 @@ const ReportLocationScreen = function ({ navigation }) {
   const [locationinfo, setLocationInfo] = useState('');
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <View style={styles.header_view}>
         <Text style={styles.header_text}> Location Information </Text>
       </View>
@@ -130,10 +130,10 @@ const ReportLocationScreen = function ({ navigation }) {
           </View>
         </View>
 
-        <View style={styles.question}>
+        <View style={styles.question2}>
           <Text style={styles.question_label}>Other Location Information: </Text>
           <TextInput
-            style={styles.location_input}
+            style={styles.location_input2}
             onChangeText={text => setLocationInfo(text)}
             value={locationinfo}
             placeholder={"(address, street, neighborhood, etc.)"}
@@ -145,6 +145,7 @@ const ReportLocationScreen = function ({ navigation }) {
         <View style={styles.prev_button}>
           <Button
             title="Back"
+            color='maroon'
             onPress={function () { navigation.navigate('Time') }}
           />
         </View>
@@ -154,6 +155,7 @@ const ReportLocationScreen = function ({ navigation }) {
         <View style={styles.next_button}>
           <Button
             title="Next"
+            color='maroon'
             disabled={!(car || offender || offendhotel || escort || online || street || house || phone || myhotel || park || bar || other)}
             onPress={() => navigation.navigate('Type')}
           />
@@ -164,12 +166,18 @@ const ReportLocationScreen = function ({ navigation }) {
 };
 
 const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: 'lightgrey',
+  },
   header_view: {
     flex: 1,
     alignContent: "center",
+    backgroundColor: 'maroon',
+    paddingTop: 30,
   },
   header_text: {
-    fontSize: 20,
+    fontSize: 30,
     textAlign: "center",
   },
   form: {
@@ -191,27 +199,49 @@ const styles = StyleSheet.create({
   },
   checkbox_container: {
     flexDirection: "row",
+    marginLeft: 10,
   },
   label: {
-    margin: 8,
+    margin: 1,
+    fontSize: 20,
   },
   checkboxes: {
     flexDirection: "row",
+    top: 10,
   },
   subcheckboxes: {
     justifyContent: "space-around",
   },
   question: {
+    paddingTop: 20,
+    paddingBottom: 10,
     flex: 1,
     marginBottom: 20,
+    top: 30,
+  },
+  question2: {
+    paddingTop: 20,
+    paddingBottom: 10,
+    flex: 1,
+    marginBottom: 20,
+    top: 70,
   },
   location_input: {
     height: 40,
-    width: 300,
+    width: 390,
     borderColor: "gray",
     borderWidth: 1,
     alignSelf: "flex-start",
     marginLeft: 10,
+  },
+  location_input2: {
+    height: 40,
+    width: 390,
+    borderColor: "gray",
+    borderWidth: 1,
+    alignSelf: "flex-start",
+    marginLeft: 10,
+    top: 10,
   },
   question_label: {
     marginLeft: 10,

@@ -15,7 +15,7 @@ const ReportOffenderScreen = function ({ navigation }) {
 
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <View style={styles.header_view}>
         <Text style={styles.header_text}> Offender Information </Text>
       </View>
@@ -207,6 +207,7 @@ const ReportOffenderScreen = function ({ navigation }) {
         <View style={styles.prev_button}>
           <Button
             title="Back"
+            color='maroon'
             onPress={() => { navigation.navigate('Type') }}
           />
         </View>
@@ -215,6 +216,7 @@ const ReportOffenderScreen = function ({ navigation }) {
 
         <View style={styles.next_button}>
           <Button
+            color='maroon'
             title="Next"
             onPress={() => { navigation.navigate('Other') }}
           />
@@ -225,9 +227,17 @@ const ReportOffenderScreen = function ({ navigation }) {
 };
 
 const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: 'lightgrey',
+  },
   header_view: {
     flex: 1,
     alignContent: "center",
+    paddingBottom: 20,
+    backgroundColor: 'maroon',
+    paddingTop: 30,
+    marginBottom: 30,
   },
   header_text: {
     fontSize: 20,

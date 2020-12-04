@@ -40,14 +40,14 @@ function MenuContentView({ navigation }) {
                     onPress={() => {
                         navigation.navigate("Login");
                     }}>
-                    <Text style={styles.topButtonText}>Sign Up</Text>
+                    <Text style={styles.topButtonText}>Login</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                    style={styles.topButton}
+                    style={styles.topButtonAbout}
                     onPress={() => {
                         navigation.navigate("About");
                     }}>
-                    <Text style={styles.topButtonText}>Sign Up</Text>
+                    <Text style={styles.topButtonText}>About</Text>
                 </TouchableOpacity>
             </View>
         </>
@@ -64,7 +64,18 @@ const styles = StyleSheet.create({
     topButton: {
         borderWidth: 3,
         borderColor: "gold",
-        width: 100,
+        width: 250,
+        marginBottom: 20,
+        padding: 10,
+        borderRadius: 100,
+        alignItems: "center",
+    },
+    topButtonAbout: {
+        top: 450,
+        borderWidth: 3,
+        borderColor: "gold",
+        width: 250,
+        marginBottom: 20,
         padding: 10,
         borderRadius: 100,
         alignItems: "center",

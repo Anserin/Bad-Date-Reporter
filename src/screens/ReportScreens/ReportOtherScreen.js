@@ -5,7 +5,7 @@ const ReportOtherScreen = function ({ navigation }) {
   const [value, changeText] = useState('');
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <View style={styles.header_view}>
         <Text style={styles.header_text}> Other Information </Text>
       </View>
@@ -25,6 +25,7 @@ const ReportOtherScreen = function ({ navigation }) {
         <View style={styles.prev_button}>
           <Button
             title="Back"
+            color='maroon'
             onPress={() => { navigation.navigate('Offender') }}
           />
         </View>
@@ -46,12 +47,20 @@ const ReportOtherScreen = function ({ navigation }) {
 
 
 const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: 'lightgrey',
+  },
   header_view: {
     flex: 1,
     alignContent: "center",
+    paddingBottom: 20,
+    backgroundColor: 'maroon',
+    paddingTop: 30,
+    marginBottom: 30,
   },
   header_text: {
-    fontSize: 20,
+    fontSize: 30,
     textAlign: "center",
   },
   form: {
@@ -75,12 +84,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   incident_input: {
-    height: 200,
+    height: 400,
     width: 300,
-    borderColor: "gray",
-    borderWidth: 1,
+    borderColor: "black",
+    borderWidth: 2,
     alignSelf: "center",
     textAlignVertical: "top",
+    fontSize: 20,
+    backgroundColor: 'white',
   },
 });
 
