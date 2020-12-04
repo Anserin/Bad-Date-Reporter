@@ -144,7 +144,7 @@ const HomeScreen = function ({ navigation }) {
                         onPress={() => {
                             navigation.navigate("Report");
                         }}>
-                        <Text>Report</Text>
+                        <Text style={styles.buttonText}>Report</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
@@ -152,12 +152,15 @@ const HomeScreen = function ({ navigation }) {
                         onPress={() => {
                             navigation.navigate("Viewer");
                         }}>
-                        <Text>View</Text>
+                        <Text style={styles.buttonText}>View</Text>
                     </TouchableOpacity>
                 </View>
-                <View>
+                <View style={styles.resourceBorder}>
+                    <Text style={styles.resourceTitle}>Access to Food:</Text>
                     <ListComponent data={food} />
+                    <Text style={styles.resourceTitle}>Access to Shelter:</Text>
                     <ListComponent data={shelter} />
+                    <Text style={styles.resourceTitle}>Access to Clothing:</Text>
                     <ListComponent data={clothing} />
                 </View>
             </View>
@@ -175,30 +178,44 @@ const styles = StyleSheet.create({
     content: {
         flex: 1,
         width: "100%",
-        backgroundColor: "white",
+        backgroundColor: "lightgrey",
     },
     buttonContainer: {
         flexDirection: "row",
         justifyContent: "center",
+        padding: 15,
     },
     button: {
-        bottom: 30,
+        bottom: 67,
         borderWidth: 4,
         borderColor: "#20232a",
         borderRadius: 90,
-        backgroundColor: "lightblue",
+        backgroundColor: "#eb9aff",
         color: "#20232a",
         textAlign: "center",
         fontSize: 40,
         fontWeight: "bold",
-        height: 100,
+        height: 70,
         width: 200,
         alignItems: "center",
+        padding: 5
+    },
+    buttonText:{
+        fontSize: 30,
     },
     topButton: {
         borderWidth: 6,
         borderColor: "gold",
         width: 65,
+    },
+    resourceBorder:{
+        borderWidth: 6,
+        borderColor: "maroon",
+        bottom: 80
+    },
+    resourceTitle:{
+        fontSize: 18,
+        marginLeft: 15,
     },
 });
 

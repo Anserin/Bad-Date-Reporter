@@ -16,7 +16,7 @@ export default function Header({
             }}
             leftElement={menuIcon}
             onLeftElementPress={() => handleMenuPressed()}
-            centerElement="App"
+            centerElement="Bad Date Reporter"
         />
     );
 }

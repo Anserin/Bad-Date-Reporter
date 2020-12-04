@@ -35,6 +35,20 @@ function MenuContentView({ navigation }) {
                     }}>
                     <Text style={styles.topButtonText}>Sign Up</Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.topButton}
+                    onPress={() => {
+                        navigation.navigate("Login");
+                    }}>
+                    <Text style={styles.topButtonText}>Sign Up</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.topButton}
+                    onPress={() => {
+                        navigation.navigate("About");
+                    }}>
+                    <Text style={styles.topButtonText}>Sign Up</Text>
+                </TouchableOpacity>
             </View>
         </>
     );

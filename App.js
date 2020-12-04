@@ -6,7 +6,6 @@ import DateViewerScreen from "./src/screens/DateViewerScreen";
 import DateReporterScreen from "./src/screens/DateReporterScreen";
 import LoginScreen from "./src/screens/LoginScreen";
 import ProfileOptionsScreen from "./src/screens/ProfileOptionsScreen";
-import ResourcesScreen from "./src/screens/ResourcesScreen";
 import SignUpScreen from "./src/screens/SignUpScreen";
 import ReportLocationScreen from "./src/screens/ReportScreens/ReportLocationScreen";
 import ReportTypeScreen from "./src/screens/ReportScreens/ReportTypeScreen";
@@ -21,7 +20,6 @@ const navigator = createStackNavigator(
     Viewer: DateViewerScreen,
     Login: LoginScreen,
     Profile: ProfileOptionsScreen,
-    Resources: ResourcesScreen,
     SignUp: SignUpScreen,
     Location: ReportLocationScreen,
     Type: ReportTypeScreen,
