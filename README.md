@@ -26,6 +26,7 @@ Run the following commands:
 * npm install react-native-reanimated
 * npm install react-native-screens
 * npm install react-native-safe-area-context
+* npm install react-native-material-ui
 
 This should install all the required dependencies
 
@@ -37,4 +38,4 @@ From the app, you should have access to scan the QR code that is generated in bo
 
 ### Where to Access the Project
 
-By clicking the "view" button you will access the section of the app we are using as our project submission.
+By clicking the "report" button you will access the section of the app we are using as our project submission.
